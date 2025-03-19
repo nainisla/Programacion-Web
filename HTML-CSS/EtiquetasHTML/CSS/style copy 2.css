@@ -1,0 +1,60 @@
+/*Comentarios*/
+/*Selectores*/
+/*Etiquetas*/
+/*Modificamos directamente la etiqueta a la cual estamos apuntando*/
+
+.rectangulo {
+   width: 500px; /* Ancho del rectángulo */
+   height: 250px; /* Alto del rectángulo */
+   background-color: black; /* Color de fondo gris */
+   margin: 20px auto; /* Centrarlo en la página */
+   display: flex; /* Habilita Flexbox */
+}   
+
+ .rectangulo-interno{
+   width: 450px; /* Ancho del rectángulo */
+  /* height: 200px; /* Alto del rectángulo */
+   background-color: rgb(39, 37, 37); /* Color de fondo gris */
+   border-radius: 10px; /* Bordes redondeados opcional */
+   margin: 20px auto; /* Centrarlo en la página */
+ 
+
+   }   
+
+body {
+   background-color: rgb(248, 239, 239); /* Fondo negro para toda la página */
+}
+h1{
+   font-weight: bold; /* Hace las letras más gruesas */
+   font-size: 24px;
+   color: white; /* Cambia el color del texto a blanco */
+   }
+h2 {
+     color: white; /* Cambia el color del texto a blanco */
+   font-weight: lighter;
+}
+h3{
+   color: rgb(99, 94, 94); /* Cambia el color del texto a blanco */
+   font-weight: lighter;
+}
+h4{
+   color: rgb(221, 79, 23); /* Cambia el color del texto a blanco */
+   font-weight: lighter;
+}
+h5 {
+   color: rgb(99, 94, 94); /* Cambia el color del texto a blanco */
+   font-weight: lighter;
+   
+}
+h6 {
+   color: white; /* Cambia el color del texto a blanco */
+   font-weight: lighter;
+}
+
+.imagen-personalizada {
+   width: 200px; /* Ajusta el ancho */
+   height: auto; /* Mantiene la proporción de la imagen */
+   border-radius: 10px; /* Opcional: Bordes redondeados */
+   margin-left:0px; /* Mueve el texto 50px a la derecha */
+   margin-top:150px;/* Mueve el texto 20px hacia abajo */
+}
