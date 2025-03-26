@@ -1,0 +1,41 @@
+.block {
+  display: block; /* Hace que los elementos ocupen todo el ancho disponible */
+  background-color: lightblue; /* Color de fondo para diferenciarlos */
+  margin: 10px 0; /* Espacio entre los elementos */
+  padding: 10px; /* Espacio dentro del div */
+  width: 200px; /* Define un ancho del 50% para ver su comportamiento */
+}
+
+.inline {
+  display: inline;
+  background-color: indianred;
+  padding: 5px;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  background-color: blue;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  background: yellowgreen;
+  padding: 5px;
+  align-items: center;
+}
+
+.flex-item {
+  background-color: blue;
+  padding: 10px;
+  margin: 5px;
+}
+
+h2 {
+  font-weight: bold; /* Hace las letras más gruesas */
+
+  color: aqua; /* Cambia el color del texto a blanco */
+}
