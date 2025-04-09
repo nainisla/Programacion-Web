@@ -14,7 +14,8 @@
 
 .inline-block {
   display: inline-block;
-  width: 150px;
+  width: 150px; /*ancho*/
+  /*height: 100px; alto*/
   margin: 5px;
   padding: 10px;
   background-color: blue;
@@ -22,10 +23,12 @@
 
 .flex-container {
   display: flex;
-  justify-content: space-between;
-  background: yellowgreen;
+  flex-direction: column; /*modifica el comportamiento de flex por defecto*/
+  background: blue;
   padding: 5px;
-  align-items: center;
+  align-items: center; /*align items solo funciona si esta flex direction*/
+  gap: 10px; /*espacio entre los elementos cuando esta el flex*/
+  width: 300px;
 }
 
 .flex-item {
@@ -34,8 +37,19 @@
   margin: 5px;
 }
 
-h2 {
+h1 {
   font-weight: bold; /* Hace las letras más gruesas */
-
   color: aqua; /* Cambia el color del texto a blanco */
+}
+.h2 {
+  text-align: center;
+}
+
+.boton {
+  width: 250px;
+  height: 40px;
+}
+.final {
+  color: aqua;
+  display: inline-block;
 }
