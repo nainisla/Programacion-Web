@@ -1,0 +1,83 @@
+.grilla {
+  display: grid; /* Activa el sistema de Grid Layout para organizar los elementos en filas y columnas */
+  /* Definición de 3 columnas de 200px cada una */
+  grid-template-columns: 200px 200px 200px;
+  /* Definición de 3 columnas, cada una de 200px de ancho */
+  grid-template-columns: repeat(3, 200px);
+  /* Aquí se repite 3 veces la columna de 200px */
+  /* Esta línea sobrescribe la anterior, haciendo que cada columna ocupe una fracción (1fr) del espacio disponible */
+  grid-template-columns: repeat(3, 1fr);
+  /* Aquí cada columna toma una parte del espacio disponible, distribuyéndose de manera igual */
+  /* Define el tamaño automático de las filas */
+  grid-auto-rows: auto; /* Las filas se ajustan automáticamente al contenido que contienen */
+}
+
+.grilla img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover; /* Imagen completa sin recorte */
+  border-radius: 16px; /* Bordes suavemente redondeados */
+  background-color: #f0f0f0; /* Color de fondo para los espacios vacíos */
+  padding: 10px; /* Espacio interno opcional */
+  transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.grilla img:hover {
+  transform: scale(1.08); /* Agranda la imagen ligeramente al pasar el mouse */
+}
+
+.titulo {
+  text-align: center; /* Centra el texto */
+  background-color: #ffffffcc; /* Fondo blanco semitransparente */
+  color: #222; /* Texto gris oscuro */
+  padding: 20px 0; /* Altura del rectángulo */
+  margin: 40px auto; /* Centrado y separado del resto */
+  width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.5rem; /* Tamaño grande del texto */
+  border-radius: 12px; /* Bordes suavemente redondeados */
+  border: 1px solid #ccc; /* Línea suave alrededor */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+}
+h2 {
+  text-align: center;
+  background-color: #ffffffcc; /* Blanco semitransparente */
+  color: #333; /* Gris oscuro, no negro puro */
+  padding: 16px 32px;
+  margin: 40px auto;
+  width: fit-content;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd; /* Borde sutil */
+}
+
+body {
+  background-image: url("https://getwallpapers.com/wallpaper/full/b/5/a/772027-jurassic-world-wallpapers-1920x1080-for-android-40.jpg");
+  background-size: cover; /* La imagen cubre toda la pantalla */
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 1024px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .grilla {
+    grid-template-columns: 1fr;
+  }
+}
+.creado-por {
+  text-align: center;
+  color: #777; /* Gris suave */
+  font-size: 0.9rem;
+  margin: 40px 0 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
