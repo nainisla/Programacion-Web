@@ -115,28 +115,113 @@ const nuevoArregloNum = arregloNum.filter((item) => item % 2 === 0);
 console.log("Números pares:", nuevoArregloNum);
 
 
-// Creamos un arreglo vacío llamado 'inventario'
-const inventario = [];
 
-// Agregamos productos al inventario con .push()
-// Cada producto es un objeto con nombre, precio y categoría
-inventario.push({ nombre: "Auriculares", precio: 1500, categoria: "Electrónica" });
-inventario.push({ nombre: "Remera", precio: 2000, categoria: "Ropa" });
-inventario.push({ nombre: "Auto eléctrico", precio: 150000, categoria: "Vehículos" });
-inventario.push({ nombre: "Zapatillas", precio: 8000, categoria: "Calzado" });
 
-// Mostramos todos los productos en consola con forEach
-console.log("📦 Inventario completo:");
-inventario.forEach((producto) => {
-  console.log(producto);
-});
 
-// Filtramos los productos que pertenecen a la categoría "Electrónica"
-const nuevo = inventario.filter((producto) => producto.categoria === "Electrónica");
-console.log("🔌 Productos de la categoría Electrónica:", nuevo);
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-// Creamos un nuevo arreglo que solo contiene los nombres de los productos
-const nuevoAr = inventario.map((producto) => {
-  return producto.nombre; // Extraemos solo el nombre
-});
-console.log("📝 Nombres de productos:", nuevoAr);
+
+
+
+
+// Manipulacion del DOM
+// Nos permite interactuar con el documento, modificar su estructura, estilo y contenido
+
+// Seleccionar elementos del DOM
+// por ID
+
+// Aquí estamos obteniedno por id la etiqueta titulo, este nos permite acceder a todas sus propiedades 
+let titulo = document.getElementById("titulo");
+console.log(titulo);
+console.log(titulo.textContent, titulo.innerText);
+
+titulo.textContent = "este es el nuevo titulo"; // Modifica el titulo
+
+
+
+let boton = document.getElementById("boton");
+boton.addEventListener("click", function(){
+    alert("Este boton ha sido clikeado")
+})
+
+let container = document.getElementById("container");
+let parrafo = document.createElement("p");
+parrafo.textContent = "Este es el parrafo creado";
+container.append(parrafo);
+
+//Ejercicio 1
+
+function agregarTarea() {
+    const input = document.getElementById("Tarea");
+    const tareaTexto =  input.value.trim();
+    if (tareaTexto === '') return;
+
+    const li = document.createElement("li");
+    li.textContent = tareaTexto;
+    li.onclick = () => li.remove();
+    document.getElementById("listaTareas").append(li);
+}
+
+//Ejercicio 2
+
+const productos = [];
+
+function agregarProducto() {
+    const input = document.getElementById("Producto");
+    const nombre = input.value.trim();
+    if (nombre === '') return;
+
+    const li = document.createElement("li");
+    li.textContent = nombre;
+    li.onclick = () => li.remove(); // Eliminar producto al hacer click
+    document.getElementById("listaProductos").append(li);  // Agregar a la lista visual
+    productos.push(producto);
+}
+
+const btnComprado = document.createElement("boton1");
+  btnComprado.textContent = "Comprado";
+  btnComprado.classList.add("comprado-btn1");
+  btnComprado.onclick = () => marcarComprado(li, producto);
+
+const btnEliminar = document.createElement("boton2");
+  btnEliminar.textContent = "Eliminar";
+  btnEliminar.classList.add("eliminar-btn2");
+  btnEliminar.onclick = () => eliminarProducto(li, producto);
+
+li.appendChild(btnComprado);
+li.appendChild(btnEliminar);
+document.getElementById("listaProductos").append(li);
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
