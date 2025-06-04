@@ -16,4 +16,14 @@ function addTask() {
   const li = document.createElement("li");
   li.textContent = obj.task;
   list.append(li);
+//Boton Eliminar
+const botonEliminar = document.createElement('button');
+botonEliminar.textContent = 'X';
+
+botonEliminar.addEventListener('click', () => {
+  li.remove();
+});
+
+li.appendChild(botonEliminar);
+task-list.appendChild(li);
 }
